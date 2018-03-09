@@ -10,4 +10,4 @@ export default createStore (
     dog: dogReducer
   }),
   applyMiddleware(thunk)
-)
+);
