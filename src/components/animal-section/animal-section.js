@@ -8,7 +8,7 @@ export default function AnimalSection(props){
   return(
     <section className='animal-section'>
 
-        <Header animalInfo={props.animalInfo}/>
+        <Header animal={props.animal} animalInfo={props.animalInfo}/>
        
         <main>
           <AnimalList animal={props.animal} animalInfo={props.animalInfo}/>
@@ -17,7 +17,7 @@ export default function AnimalSection(props){
           Adopt Me!
           </button> 
       </main> 
-      
+
     </section>
   )
 }
