@@ -28,7 +28,6 @@ import registerServiceWorker from './registerServiceWorker';
 //   story: 'Owner Passed away'
 // };
 
-console.log(store.getState());
 
 ReactDOM.render(
   <Provider store={store}>
