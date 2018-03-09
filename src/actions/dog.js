@@ -29,6 +29,6 @@ export const fetchDog = () => dispatch => {
       }
       return res.json();
     })
-    .then(dog => dispatch(fetchDogSucess(dog)))
+    .then(dog => dispatch(fetchDogSuccess(dog)))
     .catch(err => dispatch(fetchDogError(err)));
 };

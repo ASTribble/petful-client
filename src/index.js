@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import store from './store';
 import Dashboard from './components/dashboard/dashboard';
 import registerServiceWorker from './registerServiceWorker';
+
 
 const cat = {
   imageURL: 'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg',
@@ -24,6 +26,7 @@ const dog = {
   story: 'Owner Passed away'
 };
 
+console.log(store.getState());
 
 ReactDOM.render(<Dashboard catToAdopt={cat} dogToAdopt={dog}/>, document.getElementById('root'));
 registerServiceWorker();
