@@ -14,7 +14,7 @@ export default function AnimalSection(props){
       <main>
           <AnimalList animal={props.animal} animalInfo={props.animalInfo}/>
          
-          <button className='adopt' id={props.animal} onClick={e =>console.log(e.target.id)}>
+          <button className='adopt' id={props.animal} onClick={e=>props.onAdoptPet()}>
           Adopt Me!
           </button> 
       </main> 

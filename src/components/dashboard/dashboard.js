@@ -1,8 +1,7 @@
 import React from 'react';
 import './dashboard.css';
 
-
-import AnimalSection from '../animal-section/animal-section';
+import Pet from '../pet/pet';
 
 export default function Dashboard(props){
 
@@ -10,8 +9,8 @@ export default function Dashboard(props){
     <section>
       <h1>Animal Shelter</h1>
       <div className='animal-sections'>
-      <AnimalSection animal='cat' animalInfo={props.catToAdopt}/>
-      <AnimalSection animal='dog' animalInfo={props.dogToAdopt}/>
+      <Pet animal='cat' animalInfo={props.catToAdopt} onAdoptPet={e=>console.log('cat')}/>
+      <Pet animal='dog' animalInfo={props.dogToAdopt} onAdoptPet={e=>console.log('dog')}/>
       </div>
     </section>
   );
