@@ -1,0 +1,1 @@
+import {REACT_APP_API_BASE_URL} from '../config';
