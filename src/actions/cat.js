@@ -20,6 +20,8 @@ export const fetchCatError = (error) => ({
 });
 
 
+
+
 export const fetchCat = () => dispatch => {
   dispatch(fetchCatRequest());
   return fetch(`${REACT_APP_API_BASE_URL}/cat`)
@@ -29,6 +31,22 @@ export const fetchCat = () => dispatch => {
       }
       return res.json();
     })
-    .then(cat => dispatch(fetchCatSuccess()))
+    .then(cat => {
+      console.log(cat);
+      dispatch(fetchCatSuccess());
+    })  
     .catch(err => dispatch(fetchCatError(err)));
 }
+
+export const adoptCat = () => dispatch => {
+  dispatch(fetchCatRequest());
+  return fetch(`${REACT_APP_API_BASE_URL}/cat`, { method: 'delete' })
+    .then(res => {
+      if (!res.ok) {
+        return Promise.reject(res.statusText);
+      }
+      return res.json();
+    })
+    .then(cat => dispatch(fetchCat()))
+    .catch(err => dispatch(fetchCatError(err)));
+};
