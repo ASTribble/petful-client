@@ -19,7 +19,15 @@ export class Dashboard extends React.Component{
     else{
       return(
         <section>
-          <h1>Animal Shelter</h1>
+          <h1>Queue's Animal Adoption Agency: </h1>
+          <p>Take Home a Furry Friend!</p>
+          <p>
+            The adoption process works strictly on a first-in, first-out basis.
+          </p>
+          <p> 
+            You can adopt a cat, or a dog, or both, but you may only adopt the oldest one (by arrival time, not age) that is in the shelter.
+          </p>
+
           <div className='animal-sections'>
           <Pet animal='cat' animalInfo={this.props.catToAdopt} onAdoptPet={()=>this.props.dispatch(adoptCat())}/>
           <Pet animal='dog' animalInfo={this.props.dogToAdopt} onAdoptPet={()=>this.props.dispatch(adoptDog())}/>

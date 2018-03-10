@@ -7,6 +7,10 @@ img {
   flex-direction: column;
 }
 
+dt {
+  font-weight: bold;
+}
+
 @media (min-width: 700px){
   img {
   height: 250px;

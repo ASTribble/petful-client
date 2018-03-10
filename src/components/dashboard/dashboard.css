@@ -11,6 +11,23 @@ body {
   justify-content: space-around;
 }
 
+h1 {
+  border-bottom: 1px solid black;
+}
+
+.animal-section {
+  margin: 1em;
+  padding: 1em;
+  border: 1px solid black;
+}
+
+button {
+  height: 2em;
+  margin-right: 2em;
+  float: right;
+}
+
+
 @media (min-width:700px){
   .animal-sections{
     flex-direction: row;
