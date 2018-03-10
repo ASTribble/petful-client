@@ -12,14 +12,3 @@ export default function Header(props){
   )
 }
 
-Header.defaultProps = {
-  animalInfo: {
-    imageURL: 'loading...',
-    imageDescription: 'loading...',
-    name: 'loading...',
-    sex: 'loading...',
-    age: 'loading...',
-    breed: 'loading...',
-    story: 'loading...'
-  }
-}

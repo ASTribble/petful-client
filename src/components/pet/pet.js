@@ -2,7 +2,7 @@ import React from 'react';
 import AnimalSection from '../animal-section/animal-section';
 
 export default function Pet(props){
-  console.log('propr in section', props);
+
   return (
       <AnimalSection 
         animal={props.animal} 
@@ -13,13 +13,13 @@ export default function Pet(props){
 }
 
 Pet.defaultProps = {
-animalInfo: {
-  imageURL: 'loading...',
-  imageDescription: 'loading...',
-  name: 'loading...',
-  sex: 'loading...',
-  age: 'loading...',
-  breed: 'loading...',
-  story: 'loading...'
-}
-}
+  animalInfo: {
+    imageURL: 'loading...',
+    imageDescription: 'loading...',
+    name: 'loading...',
+    sex: 'loading...',
+    age: 'loading...',
+    breed: 'loading...',
+    story: 'loading...'
+  }
+}  

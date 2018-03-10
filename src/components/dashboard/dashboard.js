@@ -31,7 +31,6 @@ export class Dashboard extends React.Component{
 }
 
 const mapStateToProps = (state, props) => {
-  console.log(state);
   return ({
   catToAdopt: state.cat.cat,
   dogToAdopt: state.dog.dog,
