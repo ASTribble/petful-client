@@ -1,5 +1,6 @@
 import {createStore, applyMiddleware, combineReducers} from 'redux';
 import thunk from 'redux-thunk';
+import logger from 'redux-logger';
 
 import catReducer from './reducers/cat';
 import dogReducer from './reducers/dog';
@@ -9,5 +10,5 @@ export default createStore (
     cat: catReducer,
     dog: dogReducer
   }),
-  applyMiddleware(thunk)
+  applyMiddleware(thunk, logger)
 );

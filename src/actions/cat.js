@@ -2,7 +2,7 @@
 import { REACT_APP_API_BASE_URL } from '../config';
 
 
-export const FETCH_CAT_REQUEST = 'FETCH_DOG_REQUEST';
+export const FETCH_CAT_REQUEST = 'FETCH_CAT_REQUEST';
 export const fetchCatRequest = () => ({
     type: FETCH_CAT_REQUEST,
 }); 
@@ -45,6 +45,6 @@ export const adoptCat = () => dispatch => {
       }
       return res;
     })
-    .then(() => dispatch(fetchCat()))
+    .then(res => dispatch(fetchCat()))
     .catch(err => dispatch(fetchCatError('error', err)));
 };
