@@ -20,9 +20,10 @@ export const fetchDogError = (error) => ({
 });
 
 
+
 export const fetchDog = () => dispatch => {
   dispatch(fetchDogRequest());
-  return fetch(`${REACT_APP_API_BASE_URL}/dog`)
+  return fetch(`${REACT_APP_API_BASE_URL}/api/dog`)
     .then(res => {
       if (!res.ok) {
         return Promise.reject(res.statusText);
@@ -35,13 +36,13 @@ export const fetchDog = () => dispatch => {
 
 export const adoptDog = () => dispatch => {
   dispatch(fetchDogRequest());
-  return fetch(`${REACT_APP_API_BASE_URL}/dog`, {method: 'delete'})
+  return fetch(`${REACT_APP_API_BASE_URL}/api/dog`, {method: 'delete'})
     .then(res => {
       if (!res.ok) {
         return Promise.reject(res.statusText);
       }
-      return res.json();
+      return res;
     })
-    .then(dog => dispatch(fetchDog()))
+    .then(()=> dispatch(fetchDog()))
     .catch(err => dispatch(fetchDogError(err)));
 };
