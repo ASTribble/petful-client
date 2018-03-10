@@ -9,13 +9,22 @@ export default function AnimalSection(props){
   return(
     <section className='animal-section'>
 
-      <Header animal={props.animal} animalInfo={props.animalInfo}/>
-       
+      <Header 
+        animal={props.animal} 
+        animalInfo={props.animalInfo}
+      />   
       <main>
-          <AnimalList animal={props.animal} animalInfo={props.animalInfo}/>
+          <AnimalList 
+            animal={props.animal} 
+            animalInfo={props.animalInfo}
+          />
          
-          <button className='adopt' id={props.animal} onClick={e=>props.onAdoptPet()}>
-          Adopt Me!
+          <button 
+            className='adopt' 
+            id={props.animal} 
+            onClick={e=>props.onAdoptPet()}
+          >
+            Adopt Me!
           </button> 
       </main> 
 
